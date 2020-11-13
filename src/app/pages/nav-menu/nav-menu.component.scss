@@ -1,0 +1,9 @@
+$accent-color: rgb(4, 31, 155);
+
+nav > div {
+    background-color: $accent-color;
+}
+
+.active{
+    background-color: yellow;
+}

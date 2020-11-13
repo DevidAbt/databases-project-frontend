@@ -1,1 +1,7 @@
-<p>classes works!</p>
+<div class="row">
+    <div class="col s6">
+        <mat-card *ngFor="let class of classes">
+            <mat-card-content>{{ class.hanyadik }}. osztály, osztályfőnök: {{ class.ofo_nev }}</mat-card-content>
+        </mat-card>
+    </div>
+</div>

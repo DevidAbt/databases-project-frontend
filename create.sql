@@ -1,0 +1,1 @@
+CREATE TABLE `adatb`.`Osztalyok` ( `hanyadik` INT NOT NULL , `ofo_nev` VARCHAR(50) NOT NULL ) ENGINE = InnoDB;

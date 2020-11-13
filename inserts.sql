@@ -1,0 +1,12 @@
+INSERT INTO Osztalyok (hanyadik, ofo_nev) VALUES (1, 'Kiss Ferenc');
+INSERT INTO Osztalyok (hanyadik, ofo_nev) VALUES (2, 'Nagy Béla');
+INSERT INTO Osztalyok (hanyadik, ofo_nev) VALUES (3, 'Kovács Éva');
+INSERT INTO Osztalyok (hanyadik, ofo_nev) VALUES (4, 'Tóth János');
+INSERT INTO Osztalyok (hanyadik, ofo_nev) VALUES (5, 'Varga Ildikó');
+INSERT INTO Osztalyok (hanyadik, ofo_nev) VALUES (6, 'Szegedi Péter');
+INSERT INTO Osztalyok (hanyadik, ofo_nev) VALUES (7, 'Pécsi Edit');
+INSERT INTO Osztalyok (hanyadik, ofo_nev) VALUES (8, 'Szél Dániel');
+INSERT INTO Osztalyok (hanyadik, ofo_nev) VALUES (9, 'Mezei Márta');
+INSERT INTO Osztalyok (hanyadik, ofo_nev) VALUES (10, 'Baráth Noémi');
+INSERT INTO Osztalyok (hanyadik, ofo_nev) VALUES (11, 'Balogh Amália');
+INSERT INTO Osztalyok (hanyadik, ofo_nev) VALUES (12, 'Zsíros B. Ödön');

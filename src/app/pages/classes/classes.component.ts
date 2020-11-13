@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClassModel } from 'src/app/models/class';
 
 import { ClassService } from 'src/app/services/class.service'
 
@@ -9,7 +10,7 @@ import { ClassService } from 'src/app/services/class.service'
 })
 export class ClassesComponent implements OnInit {
 
-  classes: string = '';
+  classes: ClassModel[];
 
   constructor(private _service : ClassService) { }
 

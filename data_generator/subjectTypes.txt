@@ -1,0 +1,13 @@
+INSERT INTO Tantargytipusok (tantargynev, tipus) VALUES ('Matematika', 'reál');
+INSERT INTO Tantargytipusok (tantargynev, tipus) VALUES ('Informatika', 'reál');
+INSERT INTO Tantargytipusok (tantargynev, tipus) VALUES ('Fizika', 'reál');
+INSERT INTO Tantargytipusok (tantargynev, tipus) VALUES ('Kémia', 'reál');
+INSERT INTO Tantargytipusok (tantargynev, tipus) VALUES ('Biológia', 'reál');
+INSERT INTO Tantargytipusok (tantargynev, tipus) VALUES ('Természetismeret', 'reál');
+INSERT INTO Tantargytipusok (tantargynev, tipus) VALUES ('Irodalom', 'humán');
+INSERT INTO Tantargytipusok (tantargynev, tipus) VALUES ('Nyelvtan', 'humán');
+INSERT INTO Tantargytipusok (tantargynev, tipus) VALUES ('Történelem', 'humán');
+INSERT INTO Tantargytipusok (tantargynev, tipus) VALUES ('Testnevelés', 'humán');
+INSERT INTO Tantargytipusok (tantargynev, tipus) VALUES ('Labdarúgás', 'sport');
+INSERT INTO Tantargytipusok (tantargynev, tipus) VALUES ('Kosárlabda', 'sport');
+INSERT INTO Tantargytipusok (tantargynev, tipus) VALUES ('Technika', 'egyéb');

@@ -1,4 +1,4 @@
 export interface ClassModel{
-    hanyadikos: number,
+    hanyadik: number,
     ofo_nev: string
 }

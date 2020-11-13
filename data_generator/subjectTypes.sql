@@ -1,0 +1,13 @@
+INSERT INTO Targytipusok (targynev, tipus) VALUES ('Matematika', 'reál');
+INSERT INTO Targytipusok (targynev, tipus) VALUES ('Informatika', 'reál');
+INSERT INTO Targytipusok (targynev, tipus) VALUES ('Fizika', 'reál');
+INSERT INTO Targytipusok (targynev, tipus) VALUES ('Kémia', 'reál');
+INSERT INTO Targytipusok (targynev, tipus) VALUES ('Biológia', 'reál');
+INSERT INTO Targytipusok (targynev, tipus) VALUES ('Természetismeret', 'reál');
+INSERT INTO Targytipusok (targynev, tipus) VALUES ('Irodalom', 'humán');
+INSERT INTO Targytipusok (targynev, tipus) VALUES ('Nyelvtan', 'humán');
+INSERT INTO Targytipusok (targynev, tipus) VALUES ('Történelem', 'humán');
+INSERT INTO Targytipusok (targynev, tipus) VALUES ('Testnevelés', 'humán');
+INSERT INTO Targytipusok (targynev, tipus) VALUES ('Labdarúgás', 'sport');
+INSERT INTO Targytipusok (targynev, tipus) VALUES ('Kosárlabda', 'sport');
+INSERT INTO Targytipusok (targynev, tipus) VALUES ('Technika', 'egyéb');

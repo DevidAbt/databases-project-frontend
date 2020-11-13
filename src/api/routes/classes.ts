@@ -1,13 +1,13 @@
-const router = require('express').Router();
-const db = require('../database');
+const classRouter = require('express').Router();
+const classDb = require('../database');
 
 
-router.get('/', (req, res) => {
-    db.query("SELECT * FROM `Osztalyok` WHERE 1", (err, data, fields) => {
+classRouter.get('/', (req, res) => {
+    classDb.query("SELECT * FROM Osztalyok", (err, data, fields) => {
         res.send(data);
     })
 });
 
 
 
-module.exports = router;
+module.exports = classRouter;

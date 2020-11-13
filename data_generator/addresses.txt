@@ -1,0 +1,120 @@
+Kálmán Imre u.;65.
+Hegyalja út;15.
+Erzsébet krt.;72.
+Hegyalja út;18.
+Eötvös út;24.
+Nánási út;12.
+Árpád fejedelem útja;16.
+Csabai kapu;71.
+Baross tér;64.
+Árpád fejedelem útja;91.
+Csabai kapu;36.
+Hegyalja út;93.
+Agip u.;35.
+Bécsi utca;61.
+Bem rkp.;75.
+Erzsébet tér;60.
+Kis Diófa u.;75.
+Szent Gellért tér;61.
+Kossuth Lajos u.;12.
+Dayka Gábor u.;10.
+Erzsébet krt.;83.
+Kárpát u.;58.
+Dayka Gábor u.;13.
+Victor Hugo u.;79.
+Teréz krt.;61.
+Király u.;38.
+Eötvös út;88.
+Wesselényi u.;45.
+Tompa u.;43.
+Kárpát u.;27.
+Munkácsy Mihály út;40.
+Síp utca;29.
+Hegyalja út;63.
+Hegedûs Gyula utca;18.
+Hegedûs Gyula utca;54.
+Nagytétényi út;15.
+Bem rakpart;64.
+Belgrád rkp.;97.
+Veres Pálné u.;26.
+Kis Diófa u.;87.
+Agip u.;84.
+Wesselényi u.;26.
+Nánási út;59.
+Wesselényi u.;99.
+Kossuth Lajos u.;23.
+Dózsa György út;42.
+Baross tér;70.
+Teréz krt.;18.
+Csavargyár u.;45.
+Apor Péter u.;7.
+Budaörsi út;50.
+Hegyalja út;28.
+Szilágyi Erzsébet fasor;64.
+Tas vezér u.;10.
+Apor Péter u.;80.
+Síp utca;46.
+Tompa u.;64.
+Hegyalja út;42.
+Eötvös út;99.
+Síp utca;34.
+Bem rkp.;36.
+Bem rakpart;48.
+Erzsébet tér;26.
+Eötvös út;12.
+Kis Diófa u.;43.
+Szilágyi Erzsébet fasor;59.
+Bécsi utca;42.
+Nyár utca;66.
+Kis Diófa u.;33.
+Csabai kapu;77.
+Bem rkp.;34.
+Csabai kapu;79.
+Nyár utca;67.
+Piroska u.;58.
+Kárpát u.;97.
+Agip u.;66.
+Munkácsy Mihály út;17.
+Kossuth Lajos u.;21.
+Bécsi utca;75.
+Dayka Gábor u.;15.
+Tas vezér u.;56.
+Tas vezér u.;91.
+Teréz krt.;55.
+Veres Pálné u.;13.
+Király u.;18.
+Nyár utca;78.
+Kossuth Lajos u.;87.
+Munkácsy Mihály út;60.
+Rákóczi út;68.
+Szent Gellért tér;55.
+Bem rkp.;92.
+Belgrád rkp.;33.
+Szent Gellért tér;41.
+Erzsébet krt.;71.
+Victor Hugo u.;82.
+Piroska u.;84.
+Árpád fejedelem útja;43.
+Izabella u.;65.
+Király u.;3.
+Csavargyár u.;83.
+Wesselényi u.;11.
+Nyár utca;66.
+Erzsébet tér;11.
+Árpád fejedelem útja;59.
+Nyár utca;99.
+Apor Péter u.;62.
+Árpád fejedelem útja;32.
+Csabai kapu;74.
+Hegyalja út;81.
+Nagytétényi út;4.
+Kossuth Lajos u.;98.
+Bem rkp.;80.
+Rákóczi út;81.
+Dózsa György út;55.
+Victor Hugo u.;35.
+Hegedûs Gyula utca;27.
+Szent Gellért tér;31.
+Kárpát u.;2.
+Nagytétényi út;88.
+Dayka Gábor u.;54.

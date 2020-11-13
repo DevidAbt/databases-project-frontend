@@ -1,3 +1,4 @@
 export enum Resource{
-    CLASSES = "classes/"
+    CLASSES = "classes/",
+    STUDENTS = "students/"
 }

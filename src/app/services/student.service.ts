@@ -2,17 +2,16 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Request } from '../enums/request';
 import { Resource } from '../enums/resource';
-import { ClassModel } from '../models/class';
 import { HttpService } from './http.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ClassService {
+export class StudentService {
 
   constructor(private _http : HttpService) {}
 
-  getAllClasses(): Observable<ClassModel[]> {
-    return this._http.request(Resource.CLASSES, Request.GET, null, '');
+  getStudentsOfClass(classOfStudents: number): Observable<any> {
+    return this._http.request(Resource.STUDENTS, Request.GET, null, classOfStudents.toString());
   }
 }

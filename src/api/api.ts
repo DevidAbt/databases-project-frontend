@@ -20,6 +20,7 @@ app.use(logger);
 
 
 app.use('/api/classes', require('./routes/classes'));
+app.use('/api/students', require('./routes/students'));
 
 
 

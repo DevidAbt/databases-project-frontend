@@ -1,0 +1,25 @@
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (1, 1);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (2, 1);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (3, 1);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (4, 1);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (5, 1);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (6, 1);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (7, 1);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (8, 1);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (9, 1);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (10, 1);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (11, 1);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (12, 1);
+
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (1, 0);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (2, 0);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (3, 0);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (4, 0);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (5, 0);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (6, 0);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (7, 0);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (8, 0);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (9, 0);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (10, 0);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (11, 0);
+INSERT INTO Orarendek (hanyadikos, A_het) VALUES (12, 0);

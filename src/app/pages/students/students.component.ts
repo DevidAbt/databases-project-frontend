@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms'
 
 import { StudentService } from 'src/app/services/student.service'
 import { StudentModel } from 'src/app/models/student'
@@ -9,9 +10,13 @@ import { StudentModel } from 'src/app/models/student'
   styleUrls: ['./students.component.scss']
 })
 export class StudentsComponent implements OnInit {
+  @ViewChild('f') studentForm: NgForm;
+
   currentClass = 1;
   students: StudentModel[];
   displayedColumns: string[] = ['nev', 'szul_datum', 'iranyitoszam', 'utca', 'hazszam'];
+  emptyStudent: StudentModel = {hanyadikos: 1, nev: '', szul_datum: null, hazszam: null, utca: '', iranyitoszam: null};
+  currnetStudent: StudentModel = this.emptyStudent;
 
   constructor(private _service: StudentService) { }
 
@@ -26,11 +31,20 @@ export class StudentsComponent implements OnInit {
   }
 
   setCurrentClass(num: number){
+    this.clearFileds();
     this.currentClass = num;
     this.getStudents();
   }
 
   onStudentClick(student: StudentModel){
-    console.log(student.nev);
+    this.currnetStudent = student;
+  }
+
+  clearFileds(){
+    this.currnetStudent = this.emptyStudent;
+  }
+
+  submitStudentForm(){
+    console.log(this.studentForm);
   }
 }

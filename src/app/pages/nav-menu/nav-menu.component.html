@@ -1,12 +1,13 @@
-<nav class="nav-extended">
-    <div class="nav-content">
-        <ul class="tabs tabs-transparent">
-          <li class="tab"><a routerLink="classes">Osztályok</a></li>
-          <li class="tab"><a routerLink="students">Diákok</a></li>
-          <li class="tab"><a>Tárgyak</a></li>
-          <li class="tab"><a>Tanórák</a></li>
-          <li class="tab"><a>Órarendek</a></li>
-          <li class="tab"><a>Termek</a></li>
-        </ul>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <!-- <span class="menu-spacer"></span> -->
+    <div>
+      <a mat-button [routerLink]="'/classes'"> Osztályok </a>
+      <a mat-button [routerLink]="'/students'"> Diákok </a>
+      <a mat-button [routerLink]="'/contacts'"> Tárgyak </a>
+      <a mat-button [routerLink]="'/create-contact'"> Tanórák </a>
+      <a mat-button [routerLink]="'/activities'"> Órarendek </a>
+      <a mat-button [routerLink]="'/create-activity'"> Termek </a>
     </div>
-</nav>
+  </mat-toolbar-row>
+</mat-toolbar>

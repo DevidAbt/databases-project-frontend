@@ -1,35 +1,26 @@
-@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
 
-// $bg-color: #070a13;
+$bg-color: #37353d;
 
-// :root{
-//     background-color: $bg-color;
-// }
+:root{
+    background-color: $bg-color;
+}
 
-// .mat-table{
-//     background-color:  #011557;
-// }
+button:focus{
+    background-color: rgba(255, 0, 0, 0.24);
+}
 
-// .mat-header-cell{
-//     color: yellow;
-//     font-weight: bolder;
-// }
+.mat-row:hover > .mat-cell{
+    cursor: pointer;
+    background-color: #47252b50;
+}
 
-// .mat-cell{
-//     background-color: #000e36;
-//     color: rgb(211, 207, 8);
-//     margin: 3px;
-// }
+.mat-input-element{
+    color: white !important;
+    font-size: 25px !important;
+    // padding-bottom: -5px !important;
+}
 
-// .mat-row:hover > .mat-cell{
-//     background-color:#001f7c;
-//     cursor: pointer;
-// }
-
-// input{
-//     color: white;
-// }
-
-// .mat-form-field{
-//     color: red;
-// }
+textarea.mat-input-element{
+    vertical-align: bottom;
+}

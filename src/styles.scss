@@ -24,3 +24,20 @@ button:focus{
 textarea.mat-input-element{
     vertical-align: bottom;
 }
+
+.class-name{
+    font-size: 30px;
+    color: white;
+}
+
+body > app-root > app-students > mat-grid-list > div > mat-grid-tile:nth-child(4) > figure{
+    align-items: flex-start !important;
+    // justify-content: flex-start !important;
+    margin-top: 8px !important;
+}
+
+body > app-root > app-subjects > mat-grid-list > div > mat-grid-tile:nth-child(4) > figure{
+    align-items: flex-start !important;
+    margin-top: 30px !important;
+    // display: block !important;
+}

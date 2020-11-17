@@ -1,0 +1,85 @@
+<mat-grid-list cols="12" rows=100 rowHeight="50px">
+    <mat-grid-tile colspan=1 rowspan=1>
+        <p class="class-name">{{ currentClass }}. osztály</p>
+    </mat-grid-tile>
+    <mat-grid-tile colspan=8 rowspan=1>
+        <button mat-raised-button autofocus (click)="setCurrentClass(1)">1</button>
+        <button mat-raised-button (click)="setCurrentClass(2)">2</button>
+        <button mat-raised-button (click)="setCurrentClass(3)">3</button>
+        <button mat-raised-button (click)="setCurrentClass(4)">4</button>
+        <button mat-raised-button (click)="setCurrentClass(5)">5</button>
+        <button mat-raised-button (click)="setCurrentClass(6)">6</button>
+        <button mat-raised-button (click)="setCurrentClass(7)">7</button>
+        <button mat-raised-button (click)="setCurrentClass(8)">8</button>
+        <button mat-raised-button (click)="setCurrentClass(9)">9</button>
+        <button mat-raised-button (click)="setCurrentClass(10)">10</button>
+        <button mat-raised-button (click)="setCurrentClass(11)">11</button>
+        <button mat-raised-button (click)="setCurrentClass(12)">12</button>
+    </mat-grid-tile>
+    <mat-grid-tile colspan=3 rowspan=1></mat-grid-tile>
+    <mat-grid-tile colspan=8 rowspan=16>
+        <!-- <mat-card *ngFor="let class of subjects">
+            <mat-card-content>#{{ class.targykod }}    {{ class.hanyadikos }}. osztályos {{ class.targynev }}    ({{ class.tipus }})</mat-card-content>
+        </mat-card> -->
+        <table mat-table [dataSource]="subjects" class="mat-elevation-z8">
+            <ng-container matColumnDef="targykod">
+                <th mat-header-cell *matHeaderCellDef> Tárgykód </th>
+                <td mat-cell *matCellDef="let element"> {{element.targykod}} </td>
+            </ng-container>
+            <ng-container matColumnDef="targynev">
+                <th mat-header-cell *matHeaderCellDef> Tárgynév </th>
+                <td mat-cell *matCellDef="let element"> {{element.targynev}} </td>
+            </ng-container>
+            <ng-container matColumnDef="tipus">
+                <th mat-header-cell *matHeaderCellDef> Típus </th>
+                <td mat-cell *matCellDef="let element"> {{element.tipus}} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onSubjectClick(row)"></tr>
+        </table>        
+    </mat-grid-tile>
+    <form (ngSubmit)="submitSubjectForm()" #f="ngForm">
+        <mat-grid-tile colspan=4 rowspan=2>
+            <mat-form-field>
+                <mat-label>Tárgykód</mat-label>
+                <input  matInput [ngModel]="currentSubject.targykod" name="targykod" appOnlynumber required>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan=4 rowspan=2>
+            <mat-form-field>
+                <mat-label>Tárgynév szám</mat-label>
+                <input matInput [ngModel]="currentSubject.targynev" name="targynev" string required>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan=4 rowspan=2>
+            <mat-form-field>
+                <mat-label>Típus</mat-label>
+                <input matInput [ngModel]="currentSubject.tipus" name="tipus" string required>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan=4 rowspan=2>
+            <button *ngIf="currentSubject === emptySubject" 
+                    color="accent" 
+                    mat-raised-button 
+                    (click)="onButtonClick('ADD')"
+                    [disabled]="!f.valid"
+                    >hozzáadás</button>
+            <div *ngIf="currentSubject !== emptySubject">
+                <button *ngIf="currentSubject !== emptySubject" 
+                        mat-raised-button 
+                        (click)="clearFields()"
+                        >új</button>
+                <button color="accent" 
+                        mat-raised-button 
+                        (click)="onButtonClick('UPDATE')"
+                        [disabled]="!f.valid"
+                        >módosítás</button>
+                <button color="primary" 
+                        mat-raised-button 
+                        (click)="onButtonClick('REMOVE')"
+                        [disabled]="!f.valid"
+                        >törlés</button>
+            </div>
+        </mat-grid-tile>
+    </form>
+</mat-grid-list>

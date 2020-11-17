@@ -11,13 +11,15 @@ import { NavMenuComponent } from './pages/nav-menu/nav-menu.component';
 import { ClassesComponent } from './pages/classes/classes.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StudentsComponent } from './pages/students/students.component';
+import { SubjectsComponent } from './pages/subjects/subjects.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavMenuComponent,
     ClassesComponent,
-    StudentsComponent
+    StudentsComponent,
+    SubjectsComponent
   ],
   imports: [
     BrowserModule,

@@ -2,7 +2,7 @@
 
 <mat-grid-list cols="12" rows=100 rowHeight="50px">
     <mat-grid-tile colspan=1 rowspan=1>
-        <p>{{ currentClass }}. osztály</p>
+        <p class="class-name">{{ currentClass }}. osztály</p>
     </mat-grid-tile>
     <mat-grid-tile colspan=8 rowspan=1>
         <button mat-raised-button autofocus (click)="setCurrentClass(1)">1</button>
@@ -34,7 +34,7 @@
                 <td mat-cell *matCellDef="let element"> {{element.szul_datum | date: 'yyyy. MM. dd.'}} </td>
             </ng-container>
             <ng-container matColumnDef="iranyitoszam">
-                <th mat-header-cell *matHeaderCellDef> Iranyitoszám </th>
+                <th mat-header-cell *matHeaderCellDef> Irányitószám </th>
                 <td mat-cell *matCellDef="let element"> {{element.iranyitoszam}} </td>
             </ng-container>
             <ng-container matColumnDef="utca">
@@ -42,7 +42,7 @@
                 <td mat-cell *matCellDef="let element"> {{element.utca}} </td>
             </ng-container>
             <ng-container matColumnDef="hazszam">
-                <th mat-header-cell *matHeaderCellDef> Ház szám </th>
+                <th mat-header-cell *matHeaderCellDef> Házszám </th>
                 <td mat-cell *matCellDef="let element"> {{element.hazszam}} </td>
             </ng-container>
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -72,19 +72,19 @@
         <mat-grid-tile colspan=4 rowspan=2>
             <mat-form-field>
                 <mat-label>Irányítószám</mat-label>
-                <input [value]="currnetStudent.iranyitoszam" matInput ngModel name="iranyitoszam" required>
+                <input matInput [ngModel]="currnetStudent.iranyitoszam" name="iranyitoszam" number required>
             </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile colspan=4 rowspan=2>
             <mat-form-field>
                 <mat-label>Utca</mat-label>
-                <input [value]="currnetStudent.utca" matInput ngModel name="utca" required>
+                <input matInput [ngModel]="currnetStudent.utca" name="utca" string required>
             </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile colspan=4 rowspan=2>
             <mat-form-field>
                 <mat-label>Házszám</mat-label>
-                <input [value]="currnetStudent.hazszam" matInput ngModel name="hazszam" required>
+                <input matInput [ngModel]="currnetStudent.hazszam" name="hazszam" number required>
             </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile colspan=4 rowspan=2>
@@ -97,7 +97,7 @@
             <div *ngIf="currnetStudent !== emptyStudent">
                 <button *ngIf="currnetStudent !== emptyStudent" 
                         mat-raised-button 
-                        (click)="clearFileds()"
+                        (click)="clearFields()"
                         >új</button>
                 <button color="accent" 
                         mat-raised-button 

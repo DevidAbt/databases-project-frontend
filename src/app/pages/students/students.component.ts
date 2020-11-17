@@ -33,7 +33,7 @@ export class StudentsComponent implements OnInit {
   }
 
   setCurrentClass(num: number){
-    this.clearFileds();
+    this.clearFields();
     this.currentClass = num;
     this.getStudents();
   }
@@ -42,7 +42,7 @@ export class StudentsComponent implements OnInit {
     this.currnetStudent = student;
   }
 
-  clearFileds(){
+  clearFields(){
     this.currnetStudent = this.emptyStudent;
   }
 
@@ -52,19 +52,16 @@ export class StudentsComponent implements OnInit {
     switch(this.button){
       case "ADD":
         this._service.addStudent(student).subscribe();
-        this.clearFileds();
-        this.getStudents();
         break;
       case "UPDATE":
         this._service.updateStudent(this.currnetStudent.diakig, student).subscribe();
-        this.getStudents();
         break;
       case "REMOVE":
         this._service.removeStudent(this.currnetStudent.diakig).subscribe();
-        this.clearFileds();
-        this.getStudents();
         break;
     }
+    this.clearFields();
+    this.getStudents();
   }
 
   onButtonClick(type: string){

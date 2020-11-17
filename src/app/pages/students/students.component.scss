@@ -18,7 +18,8 @@ table{
     color: white;
 }
 
-p{
-    font-size: 30px;
-    color: white;
+figure{ //nem múködik, helyette styles.scss
+    align-items: flex-start !important;
+    // justify-content: flex-start !important;
+    margin-top: 8px !important;
 }

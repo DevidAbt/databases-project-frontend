@@ -12,6 +12,7 @@ import { ClassesComponent } from './pages/classes/classes.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StudentsComponent } from './pages/students/students.component';
 import { SubjectsComponent } from './pages/subjects/subjects.component';
+import { LessonsComponent } from './pages/lessons/lessons.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SubjectsComponent } from './pages/subjects/subjects.component';
     NavMenuComponent,
     ClassesComponent,
     StudentsComponent,
-    SubjectsComponent
+    SubjectsComponent,
+    LessonsComponent
   ],
   imports: [
     BrowserModule,

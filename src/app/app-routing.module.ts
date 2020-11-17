@@ -3,12 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { ClassesComponent } from './pages/classes/classes.component';
 import { StudentsComponent } from './pages/students/students.component';
 import { SubjectsComponent } from './pages/subjects/subjects.component';
+import { LessonsComponent } from './pages/lessons/lessons.component';
 
 
 const routes: Routes = [
   { path: 'classes', component: ClassesComponent },
   { path: 'students', component: StudentsComponent },
   { path: 'subjects', component: SubjectsComponent },
+  { path: 'lessons', component: LessonsComponent },
   { path: '', redirectTo: 'classes', pathMatch: 'full'}
 ]
 

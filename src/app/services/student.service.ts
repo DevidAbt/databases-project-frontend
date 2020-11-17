@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { HttpService } from './http.service';
+
 import { Request } from '../enums/request';
 import { Resource } from '../enums/resource';
 import { StudentRequest } from '../requests/StudentRequest';
-import { HttpService } from './http.service';
+
 
 @Injectable({
   providedIn: 'root'

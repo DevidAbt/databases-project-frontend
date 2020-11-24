@@ -25,7 +25,6 @@ export class TimetableComponent implements OnInit {
   getTimetable(): void{
     this._service.getTimetable(this.currentClass, this.currentWeek).subscribe(result => {
       this.timeTableRows = result;
-      console.log(result);
     });
   }
 

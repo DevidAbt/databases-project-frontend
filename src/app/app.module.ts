@@ -14,6 +14,7 @@ import { StudentsComponent } from './pages/students/students.component';
 import { SubjectsComponent } from './pages/subjects/subjects.component';
 import { LessonsComponent } from './pages/lessons/lessons.component';
 import { TimetableComponent } from './pages/timetable/timetable.component';
+import { RoomsComponent } from './pages/rooms/rooms.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TimetableComponent } from './pages/timetable/timetable.component';
     StudentsComponent,
     SubjectsComponent,
     LessonsComponent,
-    TimetableComponent
+    TimetableComponent,
+    RoomsComponent
   ],
   imports: [
     BrowserModule,

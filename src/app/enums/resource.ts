@@ -4,4 +4,5 @@ export enum Resource{
     SUBJECTS = "subjects/",
     LESSONS = "lessons/",
     TIMETABLE = "timetable/",
+    ROOMS = "rooms/",
 }

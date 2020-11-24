@@ -51,17 +51,24 @@ export class StudentsComponent implements OnInit {
     student.hanyadikos = this.currentClass;
     switch(this.button){
       case "ADD":
-        this._service.addStudent(student).subscribe();
+        this._service.addStudent(student).subscribe(() => {
+          this.clearFields();
+          this.getStudents();;
+        });
         break;
       case "UPDATE":
-        this._service.updateStudent(this.currnetStudent.diakig, student).subscribe();
+        this._service.updateStudent(this.currnetStudent.diakig, student).subscribe(() => {
+          this.clearFields();
+          this.getStudents();
+        });
         break;
       case "REMOVE":
-        this._service.removeStudent(this.currnetStudent.diakig).subscribe();
+        this._service.removeStudent(this.currnetStudent.diakig).subscribe(() => {
+          this.clearFields();
+          this.getStudents();
+        });
         break;
     }
-    this.clearFields();
-    this.getStudents();
   }
 
   onButtonClick(type: string){

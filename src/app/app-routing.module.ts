@@ -5,6 +5,7 @@ import { StudentsComponent } from './pages/students/students.component';
 import { SubjectsComponent } from './pages/subjects/subjects.component';
 import { LessonsComponent } from './pages/lessons/lessons.component';
 import { TimetableComponent } from './pages/timetable/timetable.component';
+import { RoomsComponent } from './pages/rooms/rooms.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'subjects', component: SubjectsComponent },
   { path: 'lessons', component: LessonsComponent },
   { path: 'timetable', component: TimetableComponent },
+  { path: 'rooms', component: RoomsComponent },
   { path: '', redirectTo: 'classes', pathMatch: 'full'}
 ]
 

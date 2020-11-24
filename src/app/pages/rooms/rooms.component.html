@@ -1,0 +1,92 @@
+<mat-grid-list cols="12" rows=100 rowHeight="50px">
+    <mat-grid-tile colspan=8 rowspan=7>
+        <table mat-table [dataSource]="computer_rooms" class="mat-elevation-z8">
+            <ng-container matColumnDef="szam">
+                <th mat-header-cell *matHeaderCellDef> Teremszám </th>
+                <td mat-cell *matCellDef="let element"> {{element.szam}} </td>
+            </ng-container>
+            <ng-container matColumnDef="nev">
+                <th mat-header-cell *matHeaderCellDef> Név </th>
+                <td mat-cell *matCellDef="let element"> {{element.nev}} </td>
+            </ng-container>
+            <ng-container matColumnDef="gepek_szama">
+                <th mat-header-cell *matHeaderCellDef> Gépek száma </th>
+                <td mat-cell *matCellDef="let element"> {{element.gepek_szama}} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="computerDisplayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: computerDisplayedColumns;" (click)="onRoomClick(row)"></tr>
+        </table>        
+    </mat-grid-tile>
+    <mat-grid-tile colspan=8 rowspan=11>
+        <table mat-table [dataSource]="lecture_rooms" class="mat-elevation-z8">
+            <ng-container matColumnDef="szam">
+                <th mat-header-cell *matHeaderCellDef> Teremszám </th>
+                <td mat-cell *matCellDef="let element"> {{element.szam}} </td>
+            </ng-container>
+            <ng-container matColumnDef="nev">
+                <th mat-header-cell *matHeaderCellDef> Név </th>
+                <td mat-cell *matCellDef="let element"> {{element.nev}} </td>
+            </ng-container>
+            <ng-container matColumnDef="ferohely">
+                <th mat-header-cell *matHeaderCellDef> Férőhely </th>
+                <td mat-cell *matCellDef="let element"> {{element.ferohely}} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="lectureDisplayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: lectureDisplayedColumns;" (click)="onRoomClick(row)"></tr>
+        </table>        
+    </mat-grid-tile>
+    <form (ngSubmit)="submitSubjectForm()" #f="ngForm">
+        <mat-grid-tile colspan=4 rowspan=2>
+            <mat-form-field>
+                <mat-label>Teremszám</mat-label>
+                <input  matInput [ngModel]="currentRoom.szam" name="szam" appOnlynumber required>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan=4 rowspan=2>
+            <mat-form-field>
+                <mat-label>Név</mat-label>
+                <input matInput [ngModel]="currentRoom.nev" name="nev" string required>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan=4 rowspan=2>
+            <mat-form-field class="number-field">
+                <mat-label>Gépszám</mat-label>
+                <input matInput [ngModel]="currentRoom.gepek_szama" 
+                    name="gepek_szama" string 
+                    (change)="onNumFieldChange($event)"
+                    [disabled]="isLectureRoom">
+            </mat-form-field>
+            <mat-form-field class="number-field">
+                <mat-label>Férőhely</mat-label>
+                <input matInput [ngModel]="currentRoom.ferohely"  
+                    name="ferohely" string 
+                    (change)="onNumFieldChange($event)"
+                    [disabled]="isComputerRoom">
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan=4 rowspan=2>
+            <button *ngIf="currentRoom === emptyRoom" 
+                    color="accent" 
+                    mat-raised-button 
+                    (click)="onButtonClick('ADD')"
+                    [disabled]="!f.valid"
+                    >hozzáadás</button>
+            <div *ngIf="currentRoom !== emptyRoom">
+                <button *ngIf="currentRoom !== emptyRoom" 
+                        mat-raised-button 
+                        (click)="clearFields()"
+                        >új</button>
+                <button color="accent" 
+                        mat-raised-button 
+                        (click)="onButtonClick('UPDATE')"
+                        [disabled]="!f.valid"
+                        >módosítás</button>
+                <button color="primary" 
+                        mat-raised-button 
+                        (click)="onButtonClick('REMOVE')"
+                        [disabled]="!f.valid"
+                        >törlés</button>
+            </div>
+        </mat-grid-tile>
+    </form>
+</mat-grid-list>

@@ -51,17 +51,24 @@ export class SubjectsComponent implements OnInit {
     subject.hanyadikos = this.currentClass;
     switch(this.button){
       case "ADD":
-        this._service.addSubject(subject).subscribe();
+        this._service.addSubject(subject).subscribe(() => {
+          this.clearFields();
+          this.getSubjects();
+        });
         break;
       case "UPDATE":
-        this._service.updateSubject(this.currentSubject.targykod, subject).subscribe();
+        this._service.updateSubject(this.currentSubject.targykod, subject).subscribe(() => {
+          this.clearFields();
+          this.getSubjects();
+        });
         break;
       case "REMOVE":
-        this._service.removeSubject(this.currentSubject.targykod).subscribe();
+        this._service.removeSubject(this.currentSubject.targykod).subscribe(() => {
+          this.clearFields();
+          this.getSubjects();
+        });
         break;
     }
-    this.clearFields();
-    this.getSubjects();
   }
 
   onButtonClick(type: string){

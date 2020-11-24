@@ -1,0 +1,57 @@
+<mat-grid-list cols="12" rows=100 rowHeight="50px">
+    <mat-grid-tile colspan=1 rowspan=1>
+        <p class="class-name">{{ currentClass }}. osztály</p>
+    </mat-grid-tile>
+    <mat-grid-tile colspan=8 rowspan=1>
+        <button mat-raised-button autofocus (click)="setCurrentClass(1)">1</button>
+        <button mat-raised-button (click)="setCurrentClass(2)">2</button>
+        <button mat-raised-button (click)="setCurrentClass(3)">3</button>
+        <button mat-raised-button (click)="setCurrentClass(4)">4</button>
+        <button mat-raised-button (click)="setCurrentClass(5)">5</button>
+        <button mat-raised-button (click)="setCurrentClass(6)">6</button>
+        <button mat-raised-button (click)="setCurrentClass(7)">7</button>
+        <button mat-raised-button (click)="setCurrentClass(8)">8</button>
+        <button mat-raised-button (click)="setCurrentClass(9)">9</button>
+        <button mat-raised-button (click)="setCurrentClass(10)">10</button>
+        <button mat-raised-button (click)="setCurrentClass(11)">11</button>
+        <button mat-raised-button (click)="setCurrentClass(12)">12</button>
+    </mat-grid-tile>
+    <mat-grid-tile colspan=3 rowspan=1></mat-grid-tile>
+    <mat-grid-tile colspan=8 rowspan=2>
+        <mat-button-toggle-group aria-label="Font Style">
+            <mat-button-toggle checked (click)="setCurrentWeek('A')">A hét</mat-button-toggle>
+            <mat-button-toggle (click)="setCurrentWeek('B')">B hét</mat-button-toggle>
+        </mat-button-toggle-group>
+    </mat-grid-tile>
+    <mat-grid-tile colspan=3 rowspan=1></mat-grid-tile>
+    <mat-grid-tile colspan=8 rowspan=8>
+        <table mat-table [dataSource]="timeTableRows" class="mat-elevation-z8">
+            <ng-container matColumnDef="idopont">
+                <th mat-header-cell *matHeaderCellDef> Óra </th>
+                <td mat-cell *matCellDef="let element"> {{element.idopont}}:00 - {{element.idopont}}:45 </td>
+            </ng-container>
+            <ng-container matColumnDef="hetfo">
+                <th mat-header-cell *matHeaderCellDef> Hétfő </th>
+                <td mat-cell *matCellDef="let element"> {{element.hetfo}} </td>
+            </ng-container>
+            <ng-container matColumnDef="kedd">
+                <th mat-header-cell *matHeaderCellDef> Kedd </th>
+                <td mat-cell *matCellDef="let element"> {{element.kedd}} </td>
+            </ng-container>
+            <ng-container matColumnDef="szerda">
+                <th mat-header-cell *matHeaderCellDef> Szerda </th>
+                <td mat-cell *matCellDef="let element"> {{element.szerda}} </td>
+            </ng-container>
+            <ng-container matColumnDef="csutortok">
+                <th mat-header-cell *matHeaderCellDef> Csütörtök </th>
+                <td mat-cell *matCellDef="let element"> {{element.csutortok}} </td>
+            </ng-container>
+            <ng-container matColumnDef="pentek">
+                <th mat-header-cell *matHeaderCellDef> Péntek </th>
+                <td mat-cell *matCellDef="let element"> {{element.pentek}} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onSubjectClick(row)"></tr>
+        </table>        
+    </mat-grid-tile>
+</mat-grid-list>

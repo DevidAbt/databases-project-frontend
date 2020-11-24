@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StudentsComponent } from './pages/students/students.component';
 import { SubjectsComponent } from './pages/subjects/subjects.component';
 import { LessonsComponent } from './pages/lessons/lessons.component';
+import { TimetableComponent } from './pages/timetable/timetable.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { LessonsComponent } from './pages/lessons/lessons.component';
     ClassesComponent,
     StudentsComponent,
     SubjectsComponent,
-    LessonsComponent
+    LessonsComponent,
+    TimetableComponent
   ],
   imports: [
     BrowserModule,

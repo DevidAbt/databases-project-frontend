@@ -4,6 +4,7 @@ import { ClassesComponent } from './pages/classes/classes.component';
 import { StudentsComponent } from './pages/students/students.component';
 import { SubjectsComponent } from './pages/subjects/subjects.component';
 import { LessonsComponent } from './pages/lessons/lessons.component';
+import { TimetableComponent } from './pages/timetable/timetable.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'students', component: StudentsComponent },
   { path: 'subjects', component: SubjectsComponent },
   { path: 'lessons', component: LessonsComponent },
+  { path: 'timetable', component: TimetableComponent },
   { path: '', redirectTo: 'classes', pathMatch: 'full'}
 ]
 

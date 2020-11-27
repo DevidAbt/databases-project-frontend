@@ -41,3 +41,25 @@ body > app-root > app-subjects > mat-grid-list > div > mat-grid-tile:nth-child(4
     margin-top: 30px !important;
     // display: block !important;
 }
+
+
+body > app-root > app-stats > mat-grid-list > div > mat-grid-tile:nth-child(3) > figure > ngx-charts-pie-chart > ngx-charts-chart > div > ngx-charts-legend > div > header > span{
+    opacity: 0;
+}
+
+body > app-root > app-stats > mat-grid-list > div > mat-grid-tile > figure > ngx-charts-pie-chart > ngx-charts-chart > div > svg > g > g > g > g.ng-star-inserted > g > text{
+    fill: white;
+    font-size: 18px;
+}
+
+body > app-root > app-stats > mat-grid-list > div > mat-grid-tile > figure > ngx-charts-bar-vertical > ngx-charts-chart > div > svg > g > g > g > g > text{
+    fill:white;
+}
+
+body > app-root > app-stats > mat-grid-list > div > mat-grid-tile:nth-child(4) > figure > ngx-charts-bar-vertical > ngx-charts-chart > div > svg > g > g > g > g > g > g > text{
+    fill: white;
+}
+
+body > app-root > app-stats > mat-grid-list > div > mat-grid-tile:nth-child(4) > figure > ngx-charts-bar-vertical > ngx-charts-chart > div > ngx-charts-legend > div > header > span{
+    opacity: 0;
+}

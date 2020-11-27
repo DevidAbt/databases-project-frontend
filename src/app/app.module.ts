@@ -15,6 +15,8 @@ import { SubjectsComponent } from './pages/subjects/subjects.component';
 import { LessonsComponent } from './pages/lessons/lessons.component';
 import { TimetableComponent } from './pages/timetable/timetable.component';
 import { RoomsComponent } from './pages/rooms/rooms.component';
+import { StatsComponent } from './pages/stats/stats.component';
+import { NgxChartsModule }from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -25,15 +27,17 @@ import { RoomsComponent } from './pages/rooms/rooms.component';
     SubjectsComponent,
     LessonsComponent,
     TimetableComponent,
-    RoomsComponent
+    RoomsComponent,
+    StatsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
     HttpClientModule,
+    FormsModule,
     BrowserAnimationsModule,
-    FormsModule
+    NgxChartsModule
   ],
   providers: [{ provide: MAT_DATE_LOCALE, useValue: 'hu-HU' }],
   bootstrap: [AppComponent]

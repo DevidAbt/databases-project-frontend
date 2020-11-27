@@ -5,7 +5,6 @@ import { HttpService } from './http.service';
 import { Request } from '../enums/request';
 import { Resource } from '../enums/resource';
 import { LessonRequest } from '../requests/LessonRequest';
-import { RoomModel } from '../models/room';
 
 
 

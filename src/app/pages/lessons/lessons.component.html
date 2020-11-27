@@ -37,6 +37,12 @@
                 <th mat-header-cell *matHeaderCellDef> Tárgynév </th>
                 <td mat-cell *matCellDef="let element"> {{element.targynev}} </td>
             </ng-container>
+            <ng-container matColumnDef="A_het">
+                <th mat-header-cell *matHeaderCellDef> hét </th>
+                <td mat-cell *matCellDef="let element"> {{element.A_het != undefined 
+                                                            ? (element.A_het == 1 ? "A" : "B")
+                                                            : ""}} </td>
+            </ng-container>
             <ng-container matColumnDef="nap">
                 <th mat-header-cell *matHeaderCellDef> Nap </th>
                 <td mat-cell *matCellDef="let element"> {{element.nap}} </td>
@@ -56,18 +62,27 @@
     <form (ngSubmit)="submitLessonForm()" #f="ngForm">
         <mat-grid-tile colspan=4 rowspan=2>
             <mat-form-field appearance="fill">
-                <mat-label>Tárgynév</mat-label>
-                <mat-select [(value)]="currentLesson.targynev">
-                    <mat-option *ngFor="let subject of uniqSubjectNames" [value]="subject">
-                        {{subject}}
+                <mat-label>Tárgykód</mat-label>
+                <mat-select [ngModel]="currentLesson.targykod" name="targykod">
+                    <mat-option *ngFor="let code of subjectCodes" [value]="code">
+                        {{code}}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
         </mat-grid-tile>
         <mat-grid-tile colspan=4 rowspan=2>
             <mat-form-field appearance="fill">
+                <mat-label>Hét</mat-label>
+                <mat-select [ngModel]="currentLesson.A_het" name="A_het">
+                    <mat-option [value]=1>A</mat-option>
+                    <mat-option [value]=0>B</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan=4 rowspan=2>
+            <mat-form-field appearance="fill">
                 <mat-label>Nap</mat-label>
-                <mat-select [(value)]="currentLesson.nap">
+                <mat-select [ngModel]="currentLesson.nap" name="nap">
                     <mat-option *ngFor="let day of weekDays" [value]="day">
                         {{day}}
                     </mat-option>
@@ -77,9 +92,19 @@
         <mat-grid-tile colspan=4 rowspan=2>
             <mat-form-field appearance="fill">
                 <mat-label>Időpont</mat-label>
-                <mat-select [(value)]="currentLesson.idopont">
+                <mat-select [ngModel]="currentLesson.idopont" name="idopont">
                     <mat-option *ngFor="let hour of hours" [value]="hour">
                         {{hour}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile colspan=4 rowspan=2>
+            <mat-form-field appearance="fill">
+                <mat-label>Teremszám</mat-label>
+                <mat-select [ngModel]="currentLesson.teremszam" name="teremszam">
+                    <mat-option *ngFor="let num of roomNumbers" [value]="num">
+                        {{num}}
                     </mat-option>
                 </mat-select>
             </mat-form-field>

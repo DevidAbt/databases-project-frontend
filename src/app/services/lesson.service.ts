@@ -5,6 +5,7 @@ import { HttpService } from './http.service';
 import { Request } from '../enums/request';
 import { Resource } from '../enums/resource';
 import { LessonRequest } from '../requests/LessonRequest';
+import { RoomModel } from '../models/room';
 
 
 
@@ -25,5 +26,25 @@ export class LessonService {
 
   getNumOfSubjectByTypesOfClass(classOfSubjects: number): Observable<any> {
     return this._http.request(Resource.LESSONS, Request.GET, null, `types/${classOfSubjects}`);
+  }
+
+  getRoomNumbers(): Observable<any> {
+    return this._http.request(Resource.ROOMS, Request.GET, null, 'numbers');
+  }
+
+  getSubjectCodesByClass(classOfSubjects: number): Observable<number[]> {
+    return this._http.request(Resource.SUBJECTS, Request.GET, null, `${classOfSubjects}/codes`);
+  }
+
+  addLesson(lesson: LessonRequest): Observable<number[]> {
+    return this._http.request(Resource.LESSONS, Request.POST, lesson, ``);
+  }
+
+  updateLesson(lesson: LessonRequest): Observable<number[]> {
+    return this._http.request(Resource.LESSONS, Request.PUT, lesson, ``);
+  }
+
+  removeLesson(lesson: LessonRequest): Observable<number[]> {
+    return this._http.request(Resource.LESSONS, Request.DELETE, lesson, ``);
   }
 }

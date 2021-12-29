@@ -1,5 +1,9 @@
 # Orarend
 
+Frontend for the databases class project. (Using Angular for the first (and last) time.)
+
+---
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
 ## Development server
